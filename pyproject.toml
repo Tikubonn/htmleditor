@@ -1,0 +1,47 @@
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "htmleditor"
+version = "1.1.0"
+dependencies = []
+requires-python = ">=3.12"
+authors = [
+  {name = "tikubonn"}
+]
+maintainers = [
+  {name = "tikubonn"}
+]
+description = "Provide an function to edit html with callback functions."
+readme = "README.md"
+license = "AGPL-3.0"
+license-files = ["LICEN[CS]E"]
+keywords = []
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest"
+]
+
+[project.urls]
+Homepage = "https://github.com/tikubonn/htmleditor"
+Documentation = "https://github.com/tikubonn/htmleditor/README.md"
+Repository = "https://github.com/tikubonn/htmleditor.git"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = [
+  "htmleditor"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v"
+testpaths = [
+  "test"
+]

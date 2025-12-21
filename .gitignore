@@ -1,0 +1,3 @@
+.pytest_cache
+src/htmleditor.egg-info
+build
