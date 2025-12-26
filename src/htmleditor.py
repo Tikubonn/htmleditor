@@ -202,8 +202,8 @@ class _HTMLEditor (HTMLParser):
       writer.put_decl(decl)
 
   def close (self):
+    super().close() #HTMLParser.close はバッファ内の残りを解析する動作を含むため self._buffer.close よりも優先して実行する必要があります。
     self._buffer.close()
-    super().close()
 
 def html_edit (
   source:str,
